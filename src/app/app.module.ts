@@ -5,18 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeesListComponent } from './components/employees-list/employees-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { EmployeeUploadComponent } from './components/employee-upload/employee-upload.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
+
   declarations: [
     AppComponent,
     EmployeesListComponent,
-    NavbarComponent
+    NavbarComponent,
+    EmployeeUploadComponent
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
